@@ -1,0 +1,701 @@
+// Import external libraries.
+@import "compass";
+@import "breakpoint";
+@import "singularitygs";
+@import "toolkit";
+
+// Import variables, abstractions, base styles and components using globbing.
+//
+// Globbing will always import files alphabetically. Optimally, all your
+// components should be self-contained and explicit enough to not have any
+// contained styles leak into unrelated components: The import order should not
+// affect the result.
+//
+// If there are variables, functions or mixins that depend on each other and
+// therefore need to be imported in a specific order you can import them
+// directly. Variables-, function- or mixin providing partials should never
+// output any styles themselves: Importing them multiple times to resolve
+// dependencies shouldn't be a problem.
+@import "variables/**/*";
+@import "abstractions/**/*";
+@import "base/**/*";
+@import "components/**/*";
+
+body {
+	height:100%;
+	font-size: $base-font-size;
+	line-height: $base-line-height;
+	color: $darkgrey; 
+	background:tint($blue, 85%);
+
+	}  
+	
+body#maintenance {
+		background:url(/sites/all/themes/cwf/images/h_bg.jpg) no-repeat top center;
+
+}
+
+	
+.l-page {
+	position:relative;
+	min-height:100%;
+}
+
+
+					@include breakpoint($tablet) {
+					.l-content {
+						padding: 0 50px;
+					}
+					}
+					@include breakpoint($desktop) {
+					.l-content {
+						padding: 0 200px;
+					}
+					}
+
+				
+	.l-branding  {
+		float:left;
+		margin: 0;
+		width:100%;
+		background:url(/sites/all/themes/cwf/images/h_bg.jpg) no-repeat top center;
+
+}
+	
+	.l-region--branding {
+		float:left;
+		width:100%;
+		}	
+		
+		
+		
+			.l-branding .site-logo {	
+						float:left;
+						width:100px;
+						margin:0 auto;	
+						display:block;	
+						text-align:center;		
+						}
+						
+									
+				@include breakpoint($tablet) {
+						.l-branding .site-logo {	
+						float:left;
+						width:300px;
+						padding-left:100px;				
+						margin:0;				
+}
+				}
+				
+					@include breakpoint($desktop) {
+						.l-branding .site-logo {	
+						float:left;
+						width:400px;
+						padding-left:200px;				
+						}
+				}
+				
+				.l-branding .site-logo img {
+					width:90%;
+				}
+				
+			
+					.l-branding .site-slogan {
+							color:#ffffff;
+							line-height:1.3em;
+							font-size:1em; 
+							padding-top:15px;
+
+						}
+				
+					 	@include breakpoint($tablet) {
+							.l-branding .site-slogan {
+							color:#ffffff;
+							line-height:1.3em;
+							font-size:1.3em; 
+							text-align:left;
+							padding-top:65px;
+							margin:0 50px 20px 50px;
+						}
+				}
+					@include breakpoint($desktop) {
+						.l-branding .site-slogan {
+							color:#ffffff;
+							line-height:1.3em;
+							font-size:1.5em; 
+							text-align:left;
+							padding-top:65px;
+							margin:0 200px 20px 200px;
+							}
+				}
+				 
+		
+				
+		
+		/* MAIN NAVIGATION MENU */
+		
+		.l-branding #block-system-main-menu {
+			float:left;
+			width:100%;
+			font-size:1.1em;
+			background: $blue;
+  			text-align:center;	
+			}
+			
+			
+			@include breakpoint($tablet) {
+			.l-branding #block-system-main-menu ul {
+			display:inline-block;
+		}
+		}
+				@include breakpoint($desktop) {
+			.l-branding #block-system-main-menu ul {
+			display:inline-block;
+		}
+		}
+
+
+		
+		.l-branding #block-system-main-menu ul, .l-branding #block-system-main-menu li {
+			list-style:none;
+			list-style-image:none;
+			}
+		
+					.l-branding #block-system-main-menu li {
+						float:none;
+						text-align:center;
+						margin:0;
+					}
+		
+											@include breakpoint($tablet) {
+										.l-branding #block-system-main-menu li {
+										float:left;
+										margin:0;
+										font-size:0.9em
+										}
+										.l-branding #block-system-main-menu li + li {
+										margin-left:10px;
+										}
+										}
+										@include breakpoint($desktop) {
+										.l-branding #block-system-main-menu li {
+										float:left;
+										margin:0;
+									}
+										}
+										@include breakpoint($desktop) {									
+										.l-branding #block-system-main-menu li + li {
+										margin-left:30px;
+										}
+										}
+											
+			.l-branding #block-system-main-menu li a {
+			padding:2px;
+			color:#ffffff;
+			display:block;
+			width:100%;
+			font-size:0.8em;
+					}
+
+	
+					@include breakpoint($tablet) {
+			.l-branding #block-system-main-menu li a {
+			padding:20px 5px;
+				font-size:0.9em;
+		}
+			}
+			
+					@include breakpoint($desktop) {
+			.l-branding #block-system-main-menu li a {
+			padding:20px 5px;
+			font-size:1em;
+			}
+			}
+			
+					.l-branding #block-system-main-menu li  a.active {
+			background-color:rgba(33,76,102,1.00);
+			}
+						
+
+			
+			.l-branding #block-system-main-menu li a:hover {
+			color:rgba(33,76,102,1.00);
+			}
+				.l-branding #block-system-main-menu li a.active:hover {
+			color:#ffffff;
+			}
+			
+			
+			/* EXTRA BITS FOR THE FIXED MENU */
+	#block-system-main-menu {
+						margin:0 auto;
+						text-align:center;
+	}
+					.l-branding .fxd {
+					width:100%;
+					padding:10px 0;
+					z-index:2000;
+					padding:0 0 0 75px;					
+}
+
+
+	
+
+			.l-branding  #block-system-main-menu ul.fxd {
+				display:inline-block;
+				background:url(/sites/all/themes/cwf/images/logosm.png) no-repeat 3px 3px $blue;
+					
+}
+					.l-branding  .fxd li a {
+					display:block;
+					}
+					
+			@include breakpoint($tablet) {
+				.l-branding  .fxd li a {
+					display:inline;
+					}
+					
+			}
+		@include breakpoint($desktop) {
+			.l-branding .fxd li a {
+					display:inline;
+					font-size:0.9em;
+					}
+					
+			}
+					 
+					@include breakpoint($tablet) {
+				.l-branding  #block-system-main-menu ul.fxd {
+						height:60px;
+						display:inline-block;
+			}
+			.l-branding  #block-system-main-menu ul.fxd li {
+				font-size:0.8em;
+				height:60px;
+			}
+			}
+			@include breakpoint($desktop) {
+				.l-branding  #block-system-main-menu ul.fxd {
+						height:62px;
+							display:inline-block;
+		}	
+			.l-branding  #block-system-main-menu ul.fxd li {
+					height:65px;
+			font-size:0.8em;
+			}		 
+			}	 
+
+		.smint {
+				height:auto;
+			}
+			
+			@include breakpoint($tablet) {
+				.smint {
+				height:55px;
+			}
+			}
+			@include breakpoint($desktop) {
+				.smint {
+				height:55px;
+			}			
+			}
+
+
+
+/* TAGS AND STUFF */	
+	
+	a {
+	color:$red;  
+	text-decoration:none;
+	}   
+	
+	p, li, span,h1,h2,h3,h4,h5,h6 {
+	margin:0 0 20px 0;
+	font-family:$para;
+	line-height:1.3em;
+	} 
+	p {
+		font-size:18px;
+	}
+	
+	h2 {
+		font-size:1.5em;
+	}
+	
+	
+/* GENERAL PANEL SETTINGS */
+
+	
+.l-page .panel-pane h3 {
+	padding:10px 0 10px 60px;
+	
+}
+
+.panel-panel > div > div { /* Needed to give all the panels position for smint */
+	float:left;
+	background: url(../images/down.png) no-repeat bottom center;
+}
+
+.l-page .panel-pane {
+	background:rgba(255,255,255,1.00);
+	padding: 30px;
+	border:1px solid rgba(101,161,182,0.40);
+	float:left;
+	margin:40px 0 60px;
+}
+
+@include breakpoint($tablet) {
+.l-page .panel-pane {
+	padding: 30px;
+}
+}
+@include breakpoint($desktop) {
+.l-page .panel-pane {
+	padding: 35px 50px;
+}
+}
+
+ 
+.l-page .panel-pane li {
+	list-style:circle;
+	margin-left:15px;
+}
+
+/* ABOUT US PANEL */
+
+
+.l-page .panel-panel > div > div.go-to-aboutus {
+	margin-top:30px;
+}
+
+.l-page .panel-pane h2 {
+	padding:60px 0 30px 0;
+	margin:0;
+	text-align:center;
+	font-size:2.2em;
+	color:$red;
+}
+
+ 
+.l-page .panel-pane .about-us {
+	background:url(../images/aboutus.png) no-repeat top center;
+}
+
+.l-page .panel-pane .node__title {
+	display:none;
+}
+
+
+/* PARTNERS PANEL */
+
+.l-page .panel-pane .partners {
+	background:url(../images/partners2.png) no-repeat center top;	
+	color:$red;
+}
+
+
+#quicktabs-view__partners__page li {
+	width:20%; 
+	float:left;
+	margin:20px 5% 20px 0;
+	padding:20px 0 0 0;
+	border-top:3px solid rgba(255,255,255,1.00);
+}
+
+#quicktabs-view__partners__page li.active {
+		border-top:3px solid  rgba(101,161,182,0.40);
+
+}
+
+
+#quicktabs-view__partners__page li a {
+	height:80px;
+	display:block;
+	text-indent:-5000px;
+	background-size:contain;
+}
+
+#quicktabs-tab-view__partners__page-0 {
+	background:url(/sites/all/themes/cwf/images/sf.png) no-repeat center left;
+}
+#quicktabs-tab-view__partners__page-1 {
+	background:url(/sites/all/themes/cwf/images/bsc-logo.jpg) no-repeat center center;
+}
+#quicktabs-tab-view__partners__page-2 {
+	background:url(/sites/all/themes/cwf/images/macmillan.png) no-repeat center center;
+}
+#quicktabs-tab-view__partners__page-3 {
+	background:url(/sites/all/themes/cwf/images/thf-logo.jpg) no-repeat center right;
+}
+
+
+#quicktabs-view__partners__page .views-field-body {
+	float:left;
+	padding:20px;
+	border-top:1px solid  rgba(101,161,182,0.40);
+}
+
+
+/* OUR INVESTMENTS  PANEL VIEW */
+.go-to-ourinvestments .our-investments {
+	background:url(../images/funding.png) no-repeat top center;
+}
+
+.go-to-ourinvestments .field--name-body img {
+	padding-right:20px;
+}
+
+/* PARTNERS PANEL VIEW */
+
+.view-partners .views-row {
+	float:left;
+	width:100%;
+	margin-bottom:20px;
+}
+
+
+/* PROGRAMME OF WORK PANEL VIEW */
+
+.l-page .go-to-programmesofwork  h2.programmes-of-work {
+	background:url(../images/programme.png) no-repeat center top;	 
+	}
+   
+   
+.l-page .pane-fp .information-for-social-enterprises {
+	background:url(../images/funding.png) no-repeat top center;
+	color:$red;
+}
+
+
+.view-fp .views-field-title {
+	color:$blue;
+	 font-family:"AvenirNextRoundedW01-De1075568";
+	 font-size:1.2em;
+	 padding-bottom:10px;
+}
+
+
+.view-fp .view-footer {
+	float:left;
+	width:100%;
+}
+.view-fp .field-content li {
+	font-size:18px;
+	margin-bottom:10px;
+}
+
+.view-fp .view-footer p {
+	text-align:center;
+}
+
+.view-fp .pdflink {
+	width:45%;
+	margin:10px auto 20px;
+}
+
+
+/* Information for commissioners */
+
+.l-page .go-to-informationforcommissioners  h2.information-for-commissioners,
+.l-page .go-to-informationforsocialenterprises  h2.information-for-social-enterprises {
+	background:url(../images/commissinfo.png) no-repeat center top;	
+}
+
+.l-page .go-to-informationforcommissioners  h3 {
+	padding-left:0;
+}
+
+
+.pdflink { 
+border-radius:25px;
+background: url(../images/pdf.png) no-repeat 3px 3px tint($blue, 80%);
+display:block;
+width:100%;
+padding:15px 75px;
+color:$blue;
+min-height:50px;
+margin:0 auto;
+text-align:center;
+font-family:$strong;
+}
+
+.pdflink:hover {
+	color:#000;
+	background:  url(../images/pdf.png) no-repeat 3px 3px  
+}
+
+
+/* Our team */
+
+.l-page .go-to-ourteam {
+	float:left;
+	width:100%;
+}
+ 
+.l-page .go-to-ourteam h2.our-team {
+	background:url(../images/partners.png) no-repeat center top;	
+}
+
+ .view-our-team .views-row {
+ 	width:100%;
+	float:left;
+	margin-bottom:30px;
+ }
+/* .view-our-team  .views-field-field-photo {
+	float:left;
+	margin-right:5%;
+	width:15%;
+ }
+ */
+ .view-our-team  .views-field-body strong {
+	color: $blue;
+	font-size:1.2em; 
+}
+
+
+/* CONTACT PANEL */
+
+.l-page .go-to-contactus {
+	float:left;
+	width:100%;
+	background-image:none; 
+}
+.l-page  .pane-contact {
+	width:100%;
+}
+
+.l-page .go-to-contactus h2.contact-us{
+		background:url(../images/contact.png) no-repeat center top;	
+
+}
+
+.l-page  #mini-panel-contact .inside > div {
+	width:100%;
+	float:left;
+}
+.l-page  #mini-panel-contact .inside > div .panel-pane {
+	padding:10px;
+}
+
+@include breakpoint($desktop) {
+	.l-page  #mini-panel-contact .inside > div {
+	width:30%;
+}
+ .l-page  #mini-panel-contact .inside > div.go-to-findus {
+ 	width:40%;
+ }
+  
+}
+
+@include breakpoint($tablet) {
+	.l-page  #mini-panel-contact .inside > div {
+	width:30%;
+}
+ .l-page  #mini-panel-contact .inside > div.go-to-findus {
+ 	width:40%;
+ }
+  
+}
+
+.l-page  #mini-panel-contact .panel-pane {
+	padding:0 ;
+	margin:0;
+	font-size:1em;
+	width:100%;
+}
+  
+
+  
+  .go-to-talktous {
+	color:#ffffff;
+	border-left:none;
+}
+
+@include breakpoint($tablet) {
+  .go-to-talktous {
+	padding:0 0 0 20px;
+	color:#ffffff;
+	border-left:3px solid tint($red, 90%);
+}
+}
+
+@include breakpoint($desktop) {
+  .go-to-talktous {
+	padding:0 0 0 20px;
+	color:#ffffff;
+	border-left:3px solid tint($red, 90%);
+}
+}
+
+#webform-client-form-12 input {
+	width:100%;
+	border:1px solid tint($red, 90%);;
+	padding:5px;
+	height:30px;
+	color:$footergrey;
+	font-family:$para;
+}
+
+#webform-client-form-12 textarea {
+	width:100%;
+	border:1px solid  tint($red, 90%);;
+	padding:5px;
+	color:$footergrey;
+	font-family:$para;
+}
+
+#webform-client-form-12 .webform-submit {
+	float:left;
+	background-color:$red;
+	width:40%;
+	color:#ffffff; 
+	height:30px;
+}
+#webform-client-form-12 .webform-submit:hover {
+	background-color:#000;
+	color:#ffffff; 
+	cursor:pointer;
+}
+
+
+
+#mini-panel-contact h2.find-us, 
+#mini-panel-contact h2.talk-to-us {
+	margin-top:0;
+	padding-top:0;
+	font-size:18px;
+	font-family:$strong;
+	text-align:left;
+	margin-bottom:0;
+	padding-bottom:20px;
+}
+
+#mini-panel-contact .panel-pane {
+	border:none;
+}
+
+#mini-panel-contact a {
+	color:$red;
+}
+
+#mini-panel-contact iframe {
+	width: 100%  !important;
+	height: 300px  !important;
+
+}
+
+
+/* PAGE FOOTER */
+
+
+.l-page .l-footer {
+	height:300px;
+	position:static;
+	bottom:0;
+	background:$blue;
+	width:100%;
+	margin: 0 0 0;
+	max-width:none; 
+}
+
+
